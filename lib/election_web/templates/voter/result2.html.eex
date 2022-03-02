@@ -1,0 +1,30 @@
+<h1>Listing Voters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>2014</th>
+      <th>2016</th>
+      <th>2018</th>
+      <th>2020</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for voter <- @voters do %>
+    <tr>
+      <td><%= voter.first %></td>
+      <td><%= voter.last %></td>
+      <td><%= voter.street %></td>
+      <td><%= voter.city %></td>
+      <td><%= voter.v_2014 %></td>
+      <td><%= voter.v_2016 %></td>
+      <td><%= voter.v_2018 %></td>
+      <td><%= voter.v_2020 %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Election · Phoenix Framework</title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </head>
+  <body>
+    <header>
+      <section class="container">
+        <nav role="navigation">
+          <ul>
+          </ul>
+        </nav>
+        <a href="https://phoenixframework.org/" class="phx-logo">
+          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
+        </a>
+      </section>
+    </header>
+    <main role="main" class="container">
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <%= @inner_content %>
+
+      <h3>Terms and Conditions</h3>
+      <p>By using this website, you agree to the following terms and restrictions - </p>
+
+      <p>(1) Any person who uses registered voter data furnished under RCW 29A.08.720 for the purpose of mailing or delivering any advertisement or offer for any property, establishment, organization, product, or service or for the purpose of mailing or delivering any solicitation for money, services, or anything of value is guilty of a class C felony punishable by imprisonment in a state correctional facility for a period of not more than five years or a fine of not more than ten thousand dollars or both such fine and imprisonment, and is liable to each person provided such advertisement or solicitation, without the person's consent, for the nuisance value of such person having to dispose of it, which value is herein established at five dollars for each item mailed or delivered to the person's residence. However, a person who mails or delivers any advertisement, offer, or solicitation for a political purpose is not liable under this section unless the person is liable under subsection (2) of this section. For purposes of this subsection, two or more attached papers or sheets or two or more papers that are enclosed in the same envelope or container or are folded together are one item. Merely having a mailbox or other receptacle for mail on or near the person's residence is not an indication that the person consented to receive the advertisement or solicitation. A class action may be brought to recover damages under this section, and the court may award a reasonable attorney's fee to any party recovering damages under this section.</p>
+      <p>(2) Subject to the restrictions of RCW 29A.08.710 and 40.24.060, poll books, precinct lists, and current lists of registered voters are public records and must be made available for public inspection and copying under such reasonable rules and regulations as the county auditor or secretary of state may prescribe. The county auditor or secretary of state shall promptly furnish current lists of registered voters in his or her possession, at actual reproduction cost, to any person requesting such information. The lists shall not be used for the purpose of mailing or delivering any advertisement or offer for any property, establishment, organization, product, or service or for the purpose of mailing or delivering any solicitation for money, services, or anything of value. However, the lists and labels may be used for any political purpose. The county auditor or secretary of state must provide a copy of RCW 29A.08.740 to the person requesting the material that is released under this section.</p>
+
+      <p>(3) For the purposes of this section, "political purpose" means a purpose concerned with the support of or opposition to any candidate for any partisan or nonpartisan office or concerned with the support of or opposition to any ballot proposition or issue. "Political purpose" includes, but is not limited to, such activities as the advertising for or against any candidate or ballot measure or the solicitation of financial support</p>
+
+      <p>(4) Each person furnished data under RCW 29A.08.720 shall take reasonable precautions designed to assure that the data is not used for the purpose of mailing or delivering any advertisement or offer for any property, establishment, organization, product, or service or for the purpose of mailing or delivering any solicitation for money, services, or anything of value. However, the data may be used for any political purpose. Where failure to exercise due care in carrying out this responsibility results in the data being used for such purposes, then such person is jointly and severally liable for damages under subsection (1) of this section along with any other person liable under subsection (1) of this section for the misuse of such data.</p>
+
+
+    </main>
+  </body>
+</html>
