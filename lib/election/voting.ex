@@ -24,7 +24,13 @@ defmodule Election.Voting do
   end
 
   def list_voters_address(%{"street" => street, "city" => city}) do
-    from(v in Voter, where: v.street == ^String.upcase(street) and v.city==^String.upcase(city), select: v)
+
+    tokens = String.split(street) |> Enum.map(&String.trim/1) |> Enum.join("&")
+
+    from(v in Voter, 
+      where: fragment("ts @@ to_tsquery(?)", ^tokens)
+      and v.city==^String.upcase(city), 
+      select: v)
     |> Repo.all()
   end
     

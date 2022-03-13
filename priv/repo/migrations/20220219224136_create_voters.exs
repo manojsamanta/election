@@ -10,8 +10,6 @@ defmodule Election.Repo.Migrations.CreateVoters do
       add :city, :string
       add :county, :string
       add :precinct, :string
-      add :zip, :integer
-      add :age, :integer
       add :v_2014, :boolean, default: false, null: false
       add :v_2016, :boolean, default: false, null: false
       add :v_2018, :boolean, default: false, null: false

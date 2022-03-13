@@ -10,8 +10,6 @@ defmodule Election.Voting.Voter do
     field :city, :string
     field :county, :string
     field :precinct, :string
-    field :age, :integer
-    field :zip, :integer
     field :v_2014, :boolean, default: false
     field :v_2016, :boolean, default: false
     field :v_2018, :boolean, default: false
